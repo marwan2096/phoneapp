@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> part2 bonus</title>
+</head>
+
+<body>
+    <script>
+        var contactList = [];
+        var app = true;
+
+        do {
+            var input = prompt("  add  or search ");
+
+            if (input == "add") {
+
+                addContact();
+            }
+            if (input == "search") {
+                searchContact();
+            }
+           
+
+        } while (app)
+
+        function addContact() {
+            var contacts = {
+                name: prompt("  contact"),
+                phone: prompt("  phone number ")
+            }
+            contactList.push(contacts);
+        }
+        function searchContact() {
+            var input2 = prompt("name or number  ");
+            if (input2 == "name") {
+                var name = prompt("enter name");
+
+                contactList.find(function (item) {
+                    item.name == name;
+                    for (var i in item) {
+                        alert("name is " + item.name + " phone is " + item.phone);
+                        document.write( "name is  " + name + " and phone is " + phone)
+                    }
+                }
+                )
+            }
+            if (input2 == "number") {
+                var number = prompt("enter number");
+
+                contactList.find(function (item) {
+                    item.phone == number;
+                    for (var i in item) {
+                        alert("name is  " + item.name + " and phone is " + item.phone);
+                        document.write( "name is  " + name + " and phone is " + phone)
+                        
+                        
+                    }
+                }
+                )
+            }
+        } </script>
